@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="/resources/css/test/styles.css">
+<section class="course-slider section-padding-course text-center">
+    <div class="container">
+        <div class="row" ng-controller="CourseController as controller">
+            <div class="col-md-12">
+                <div class="avatar">
+                    <img src="https://lagunita.stanford.edu/c4x/Education/EDUC115N/asset/images_course_image.jpg"
+                    alt="Avatar">
+                </div>
+                <h2>{{controller.course.title}}</h2>
+                <h2>{{controller.course.description}}</h2>
+                <p class="author">{{controller.course.author}}</p>
+            </div>
+        </div>
+    </div>
+</section>

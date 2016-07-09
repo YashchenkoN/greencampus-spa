@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="/resources/css/test/styles.css">
+<section id="form-id" class="sign-up text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3" ng-controller="LoginController">
+                <h3>Enter your credentials</h3>
+                <form class="signup-form" ng-submit="login()">
+                    <div class="form-input-group">
+                        <i class="fa fa-envelope"></i>
+                        <input id="email" type="email" required="required" placeholder="Enter your email" ng-model="email"/>
+                    </div>
+
+                    <div class="form-input-group">
+                        <i class="fa fa-lock"></i>
+                        <input id="password" required="required" type="password"
+                        placeholder="Enter your password" ng-model="password"/>
+                    </div>
+                    <button id="btnSub" type="submit" class="btn-fill sign-up-btn">Sign in</button>
+                </form>
+                <h3>or use social authorization</h3>
+                <form class="signup-form" action="/signin/vkontakte" method="post">
+                    <input type="hidden" name="scope" value="notify,photos,pages,offline,email"/>
+                    <button type="submit" class="btn-fill sign-up-btn connectButton">Vkontakte</button>
+                </form>
+                <br/>
+                <form class="signup-form" action="/signin/facebook" method="post">
+                    <input type="hidden" name="scope" value="public_profile,email"/>
+                    <button type="submit" class="btn-fill sign-up-btn connectButton">Facebook</button>
+                </form>
+                <br/>
+                <form class="signup-form" action="/signin/google" method="post">
+                    <input type="hidden" name="scope" value="profile email"/>
+                    <button type="submit" class="btn-fill sign-up-btn connectButton">Google</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
